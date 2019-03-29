@@ -1,0 +1,16 @@
+{
+    "name": "producer",
+    "scripts": {
+        "start": "node  app.js"
+    },
+    "engines": {
+        "node": "10.x"
+    },
+    "description": "This is the sample project to demonstrate how to produce RabbitMQ event on SAP Cloud Platform",
+    "dependencies": {
+        "amqplib": "^0.5.3",
+        "body-parser": "^1.18.3",
+        "cfenv": "^1.1.0",
+        "express": "4.14.0"
+    }
+}

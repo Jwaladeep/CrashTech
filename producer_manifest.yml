@@ -1,0 +1,13 @@
+applications:
+- name: producer
+  instances: 1
+  memory: 128M
+  disk_quota: 128M
+  routes:
+  - route: producer-obstructionistic-interindependence.cfapps.eu10.hana.ondemand.com
+  buildpack: nodejs_buildpack
+  command: node app.js
+  services:
+  - pubsub-messagingservice
+  - cfinstance
+  stack: cflinuxfs3

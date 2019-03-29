@@ -1,0 +1,9 @@
+---
+applications:
+- name: crashTech
+  random-route: true
+  memory: 128MB
+  disk_quota: 128MB
+  instances: 1
+  buildpack: nodejs_buildpack
+  command: node app.js
