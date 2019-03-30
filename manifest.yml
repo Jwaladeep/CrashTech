@@ -7,3 +7,5 @@ applications:
   instances: 1
   buildpack: nodejs_buildpack
   command: node app.js
+services:
+   - cfinstance
