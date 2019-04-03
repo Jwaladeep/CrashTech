@@ -16,7 +16,8 @@ exports.contact_create = function (req, res) {
 			phone:req.body.phone,
 			city:req.body.city,
 			registerfor:req.body.registerfor,
-			appdate:req.body.appdate
+			appdate:req.body.appdate,
+            comment:req.body.comment
         }
     );
 

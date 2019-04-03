@@ -35,8 +35,27 @@
         }
     </style>
     <style>
-        button#registerfor:enabled{
+
+        button#registerbtn:enabled{
             cursor:pointer;
+            background: #a0c9c1;
+        }
+        button#registerbtn{
+            position: relative;
+            left: 50%;
+        }
+        button#resetbtn{
+            left:32%;
+            position: relative;
+        }
+        .labelPos{
+        left: 1%;
+        position: absolute;
+        margin-top: inherit;
+        }
+        .inputPos{
+            position:relative;
+            left:41%;
         }
     </style>
     <title> CrashTech</title>
@@ -1771,7 +1790,7 @@
     <iframe width="0" height="0" name="__cmpLocator" style="display: none;"></iframe>
     <iframe height="1" width="1" frameborder="0" style="position:absolute;top:0;left:0;visibility:hidden;pointer-events:none;" tabindex="-1" allowtransparency="true" src="https://cookiex.ngd.yahoo.com/v2/cexposer/SIG=11lum9jej/*https%3A//www.tumblr.com/yahoo_cookie_receiver.html"></iframe>
     <div class="about-tumblr-showcase ready show-create">
-        <div class="dash_b_form_container with_bg has_subheading">
+       <!--  <div class="dash_b_form_container with_bg has_subheading">
             <div class="mobile-apps">
                 <ul class="apps">
                     <li class="app-item">
@@ -1782,7 +1801,7 @@
                     </li>
                 </ul>
             </div>
-        </div>
+        </div> -->
         <div class="showcase">
             <div class="section login-section old-hat" data-section="login" data-section-title="Sign up" style="z-index: 4;">
                 <div id="fullscreen_post_bg" class="fullscreen_post_bg" style="background-image:url('mainPage.png');"><img id="fullscreen_post_image" src="mainPage.png" alt="Posted by Afsar">
@@ -1910,22 +1929,22 @@
             <div class="section welcome-section" data-section="welcome" data-section-title="Okay, it’s not actually hard to explain." style="z-index: 1;">
                 <div class="section-wrapper">
                     <div class="fullscreen_post_bg" style="background-image:url(https://66.media.tumblr.com/a367c2f8a89ef5073a38d009f86d8785/tumblr_po214mkFVa1tv1x8do1_1280.jpg)">
-                        <form id="registrationform" style="position: absolute;top: 22%;left: 37%;margin: 1rem;width: fit-content;font-family: cursive;font-size: medium;">
-                            <label>Name</label>
-                            <input class="inputbox" type="text" name="name" id="name" required>
+                        <form id="registrationform" style="position: absolute;top: 18%;left: 36%;margin: 1rem;width: fit-content;font-family: cursive;font-size: medium;">
+                            <label for="name" class="labelPos">Name*</label>
+                            <input class="inputbox inputPos" type="text" name="name" id="name" placeholder="Enter your name here.." required>
                             <br>
-                            <label>OrgName</label>
-                            <input class="inputbox" type="text" name="orgname" id="orgname" required>
+                            <label for="orgname" class="labelPos">Institution Name*</label>
+                            <input class="inputbox inputPos" type="text" name="orgname" id="orgname" placeholder="Enter Organisation's name here.. " required>
                             <br>
-                            <label>EmailID</label>
-                            <input class="inputbox" type="email" name="email" id="email" required>
+                            <label for="email" class="labelPos">EmailID*</label>
+                            <input class="inputbox inputPos" type="email" name="email" id="email" placeholder="Eg: jwalagarwal79@gmail.com" required>
                             <br>
-                            <label>Phone</label>
-                            <input class="inputbox" type="tel" name="phone" id="phone" pattern="[0-9]{10}" required>
+                            <label for="phone" class="labelPos">Phone*</label>
+                            <input class="inputbox inputPos" type="tel" name="phone" id="phone" pattern="[0-9]{10}" placeholder="Eg: 8292613514" required>
                             <br>
-                            <label>City</label>
-                            <select class="inputbox" name="city" id="city" required>
-                                <option>Select City</option>
+                            <label for="city" class="labelPos">City*</label>
+                            <select class="inputbox inputPos" name="city" id="city" required>
+                                <option >Select Your City</option>
                                 <optgroup label="Jharkhand">
                                     <option value="Hazaribagh">Hazaribagh</option>
                                     <option value="Jamshedpur">Jamshedpur</option>
@@ -1948,17 +1967,18 @@
                                     <option value="Kolkata">Kolkata</option>
                                 </optgroup>
                             </select><br>
-                            <label>Register for:</label>
-                            <input class="inputbox" type="text" id="registerfor" required><br>
-                            <label>Appointment Date</label>
-                            <input class="inputbox" type="date" name="appdate" id="appdate"><br>
+                            <label for="registerfor" class="labelPos">Register For*</label>
+                            <input class="inputbox inputPos" type="text" name="registerfor" placeholder="Select a category from Tiles above.." id="registerfor" required><br>
+                            <label for="appdate" class="labelPos">Appointment Date*</label>
+                            <input class="inputbox inputPos" type="date" name="appdate" id="appdate"><br>
+                            <label for="comment" class="labelPos">Comment</label><textarea name="comment" class="inputPos inputbox" id="comment" placeholder="Have some query? Write to us!!"></textarea><br>
                             <button class="resetbtn" id="resetbtn">Reset</button>
                             <button class="registerbtn" onclick="onClickRegister()" id="registerbtn" disabled="disabled">Register</button>
                         </form>
                     </div>
                     <div class="fullscreen_post_footer">
-                        <div class="fullscreen_post_posted_by show"><a href="https://flynns-drawings.tumblr.com/" target="_blank" rel="nofollow" title="Posted by flynns-drawings">Posted by&nbsp;<strong>flynns-drawings</strong></a>
-                            <a href="https://flynns-drawings.tumblr.com/" target="_blank" rel="nofollow" title="flynns-drawings" class="post_avatar root_tumblelog" style="background-image:url(https://66.media.tumblr.com/avatar_93fad9d3ff0c_64.pnj)"><img src="https://66.media.tumblr.com/avatar_93fad9d3ff0c_64.pnj" alt="flynns-drawings"></a>
+                        <div class="fullscreen_post_posted_by show"><a href="https://twitter.com/heyAfsar" target="_blank" rel="nofollow" title="Follow Afsar">Follow &nbsp;<strong>Afsar</strong></a>
+                            <a href="https://www.linkedin.com/in/heyafsar/" target="_blank" rel="nofollow" title="Md. Afsar Hussain" class="post_avatar root_tumblelog" style="background-image:url('afsar.png')"><img src="afsar.png"></a>
                         </div>
                     </div>
                 </div>

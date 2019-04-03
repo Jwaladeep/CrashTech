@@ -55,6 +55,7 @@ function navToFourth(msg){
 	var city = document.getElementById("city").value;
 	var appdate = document.getElementById("appdate").value;
 	var registerfor = document.getElementById("registerfor").value;
+		var comment = document.getElementById("comment").value;
 	if(name&& orgname && email&& phone && city && registerfor && appdate){
 		$('#registerbtn').prop('disabled', false); 
 	}
@@ -72,6 +73,7 @@ function onClickRegister(oEvent){
 	var city = document.getElementById("city").value;
 	var appdate = document.getElementById("appdate").value;
 	var registerfor = document.getElementById("registerfor").value;
+	var comment = document.getElementById("comment").value;
 	var toSend={
 		"name": name,
 		"orgname": orgname,
@@ -79,7 +81,8 @@ function onClickRegister(oEvent){
 		"phone":phone,
 		"city":city,
 		"appdate":appdate,
-		"registerfor":registerfor
+		"registerfor":registerfor,
+		"comment":comment
 		
 	};
 	alert(JSON.stringify(toSend));
@@ -87,7 +90,7 @@ function onClickRegister(oEvent){
 	var settings = {
   "async": true,
   "crossDomain": true,
-  "url": "https://crashtech-undeputized-peacockism.cfapps.eu10.hana.ondemand.com/register/",
+  "url": "https://crashtech-undeputized-peacockism.cfapps.eu10.hana.ondemand.com/register/create",
   "method": "POST",
   "headers": {
     "content-type": "application/x-www-form-urlencoded",
@@ -99,7 +102,7 @@ function onClickRegister(oEvent){
 $.ajax(settings).done(function (response) {
   console.log(response);
 });
-	alert('this is it from script0');
+	alert('Registration confirmed!! Our team will reach back to you soon. ');
 }
 
 function moveToFourthPage(oEvent){

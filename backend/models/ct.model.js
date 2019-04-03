@@ -8,7 +8,8 @@ let ContactSchema = new Schema({
 	phone:{type:String},
 	city:{type:String},
 	registerfor:{type:String,required:true},
-    appdate: {type: Date, default: Date.now}
+    appdate: {type: Date, default: Date.now},
+    comment:{type:String}
 });
 
 
