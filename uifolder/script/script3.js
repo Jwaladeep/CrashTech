@@ -1,3 +1,4 @@
+
 webpackJsonp([16], {
     0: function(e, t, i) {
         i(1481), i(1516), i(1517), i(1518), i(1519), e.exports = i(1520)
@@ -1259,14 +1260,18 @@ webpackJsonp([16], {
             _imports = "undefined" != typeof _ ? _.templateSettings.imports : {},
             _keys = _.keys,
             _values = _.values;
+			var f= __webpack_require__(112);
         module.exports = Function(_keys(_imports), "return " + function(obj) {
             obj || (obj = {});
             var __t, __p = "",
                 __e = _.escape;
-            with(obj) __p += '<div class="create-graphic"><div class="post-icon text-icon" style="background-image: url(4dCT.png);background-size:;background-repeat: space;/* background-origin: content-box; */background-size: cover;background-position-x: center;"><span class="icon-label">' + __e(__("4-Day CrashTech")) + '</span></div><div class="post-icon photo-icon"><span class="icon-label">' + __e(__("Frontend Development")) + '</span></div><div class="post-icon quote-icon"><span class="icon-label">' + __e(__("Middleware Services")) + '</span></div><div class="post-icon link-icon"><span class="icon-label">' + __e(__("Backend Development")) + '</span></div><div class="post-icon chat-icon"><span class="icon-label">' + __e(__("Data Structure & Algorithms")) + '</span></div><div class="post-icon audio-icon"><span class="icon-label">' + __e(__("MEAN Stack Developments")) + '</span></div><div class="post-icon video-icon"><span class="icon-label">' + __e(__("Technical Interview Workshop")) + "</span></div></div>";
+			with(obj) __p += '<div class="create-graphic"><div id="4D" class="post-icon text-icon" style="background-image: url(4dCT.png);background-size:;background-repeat: space;background-size: cover;background-position-x: center;"><span class="icon-label">' + __e(__("4-Day CrashTech")) + '</span></div><div class="post-icon photo-icon" id="FD"><span class="icon-label">' + __e(__("Frontend Development")) + '</span></div><div class="post-icon quote-icon" id="MS"><span class="icon-label">' + __e(__("Middleware Services")) + '</span></div><div class="post-icon link-icon" id="BD"><span class="icon-label">' + __e(__("Backend Development")) + '</span></div><div class="post-icon chat-icon" id="DSA"><span class="icon-label">' + __e(__("Data Structure & Algorithms")) + '</span></div><div class="post-icon audio-icon" id="MEAN"><span class="icon-label">' + __e(__("MEAN Stack Development")) + '</span></div><div class="post-icon video-icon" id="TIW"><span class="icon-label">' + __e(__("Technical Interview Workshop")) + "</span></div></div>";
             return __p
         }.toString()).apply(void 0, _values(_imports))
     },
+	112: function(){
+		$('.dot').trigger('click');
+	},
     1492: function(e, t, i) {
         "use strict";
         var s = i(3),
@@ -1394,6 +1399,13 @@ webpackJsonp([16], {
                     e.preventDefault();
                     var t = s(e.currentTarget);
                     t.hasClass("active") || (this.$dots.removeClass("active"), t.addClass("active"), a.trigger("abouttumblr:navigate", t.index()))
+                },
+				 gotoFourth :function(msg){
+                     a.trigger("abouttumblr:navigate",3);
+                     $("#firstdot").removeClass("active");
+					 $("#seconddot").removeClass("active");
+					 $("#thirddot").removeClass("active");
+					 $("#fourthdot").addClass("active");
                 },
                 initialize: function(e) {
                     this.options = o.extend({}, this.defaults, e), this.$dots = s()

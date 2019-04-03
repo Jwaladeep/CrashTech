@@ -5,9 +5,10 @@ let ContactSchema = new Schema({
     name: {type: String, required: true, max: 100},
 	orgname: {type: String },
 	email:{type:String,required:true},
-	mobile:{type:String},
-	category:{type:String,required:true},
-    date: {type: Date, default: Date.now}
+	phone:{type:String},
+	city:{type:String},
+	registerfor:{type:String,required:true},
+    appdate: {type: Date, default: Date.now}
 });
 
 

@@ -26,6 +26,16 @@
     border-radius: 3px;
     box-shadow: 0 0 0 3px #529ecc
 }
+.l-header-container .hide-logo [data-whatinput=keyboard] .signupbtn:focus,
+.l-header-container .hide-logo [data-whatinput=keyboard] .signupbtn:focus,
+[data-whatinput=keyboard] .about-tumblr-showcase:focus,
+[data-whatinput=keyboard] .about-tumblr-showcase:focus,
+[data-whatinput=keyboard] .l-header-container .hide-logo .signupbtn:focus,
+[data-whatinput=keyboard] .l-header-container .hide-logo .signupbtn:focus {
+    border-radius: 3px;
+    box-shadow: 0 0 0 3px #529ecc
+}
+
 
 html.show-about-tumblr {
     height: 100%
@@ -185,7 +195,70 @@ html.show-about-tumblr .logged-out-header .logo {
     padding-right: 0;
     pointer-events: none
 }
+/* here signupbtntwo */
 
+.l-header-container .login-button,
+.l-header-container .signupbtntwo {
+    max-width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: all .25s cubic-bezier(.165, .84, .44, 1), opacity 1ms linear
+}
+
+.l-header-container .signupbtntwo {
+    transition: all .25s cubic-bezier(.165, .84, .44, 1), color .7s ease-out, opacity 1ms linear;
+    margin-right: 0
+}
+
+.show-about+.l-header-container .signupbtntwo,
+.show-about+.l-header-container .signupbtntwo:active,
+.show-about+.l-header-container .signupbtntwo:focus {
+    background-color: #fff;
+    color: #a0c9c1
+}
+
+.show-blogs+.l-header-container .signupbtntwo,
+.show-blogs+.l-header-container .signupbtntwo:active,
+.show-blogs+.l-header-container .signupbtntwo:focus {
+    background-color: #fff;
+    color: #7c5cff
+}
+
+.show-dashboard+.l-header-container .signupbtntwo,
+.show-dashboard+.l-header-container .signupbtntwo:active,
+.show-dashboard+.l-header-container .signupbtntwo:focus {
+    background-color: #fff;
+    color: #001935
+}
+
+.show-create+.l-header-container .signupbtntwo,
+.show-create+.l-header-container .signupbtntwo:active,
+.show-create+.l-header-container .signupbtntwo:focus {
+    background-color: #fff;
+    color: #eec1a0
+}
+
+.signup_account .l-header-container .hide-logo .signupbtntwo {
+    color: #a0c9c1
+}
+
+.l-header-container .hide-logo .signup_link {
+    margin-right: 0
+}
+
+.signup_account .l-header-container .hide-logo .signupbtntwo,
+.signup_determine:not(.signup_account) .l-header-container .hide-logo .login-button,
+.signup_get_started:not(.signup_account) .l-header-container .hide-logo .login-button,
+.signup_get_started:not(.signup_login) .l-header-container .hide-logo .signupbtntwo,
+.signup_login .l-header-container .hide-logo .login-button {
+    margin-right: 0;
+    max-width: 0;
+    opacity: 0;
+    padding-left: 0;
+    padding-right: 0;
+    pointer-events: none
+}
+/*till here */
 @media only screen and (max-height:800px),
 only screen and (max-width:1100px) {
     .about-tumblr-showcase .section-title {

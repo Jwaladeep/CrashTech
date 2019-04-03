@@ -95,13 +95,13 @@ html.logged_out {
 }
 
 .dash_b .fullscreen_post_bg:before {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.1);
     background-image: none
 }
 
-.lodb.loading .fullscreen_post_bg:after {
+/*.lodb.loading .fullscreen_post_bg:after {
     opacity: 0
-}
+} */
 
 .dash_b .fullscreen_post_footer_inner {
     height: 210px
@@ -187,7 +187,8 @@ html.logged_out {
     padding-left: 5px;
     margin-left: -5px;
     margin-right: 12px;
-    font-weight: normal
+    font-weight: normal;
+	visibility: hidden;
 }
 
 .login_link:last-child {
@@ -220,6 +221,22 @@ html.logged_out {
 .footer_legal_links .signup_link:active {
     background: rgba(255, 255, 255, 0.28)
 }
+.footer_legal_links .signupbtn {
+    display: block;
+    height: 45px;
+    padding: 0 10px;
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    line-height: 45px;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.33)
+}
+
+.footer_legal_links .signupbtn:active {
+    background: rgba(255, 255, 255, 0.28)
+}
 
 .signup_waiting .tumblr_login_link {
     display: none
@@ -247,6 +264,7 @@ html.logged_out {
     opacity: 0.6
 }
 
+/*
 .fullscreen_post_bg:after {
     content: '';
     position: fixed;
@@ -255,6 +273,7 @@ html.logged_out {
     bottom: 0;
     left: 0
 }
+*/
 
 .fullscreen_post_bg img {
     display: none

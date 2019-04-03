@@ -13,9 +13,10 @@ exports.contact_create = function (req, res) {
             name: req.body.name,				//initialising object with values from payload
             orgname: req.body.orgname,
 			email:req.body.email,
-			mobile:req.body.mobile,
-			category:req.body.category,
-			date:req.body.date
+			phone:req.body.phone,
+			city:req.body.city,
+			registerfor:req.body.registerfor,
+			appdate:req.body.appdate
         }
     );
 

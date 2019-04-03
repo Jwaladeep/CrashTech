@@ -14955,6 +14955,62 @@ html.dialog_lock {
     font-size: 40px!important
 }
 
+
+.logged-out-header .signupbtntwo {
+    display: inline-block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: 5px 7px;
+    border-radius: 2px;
+    font-family: Helvetica Neue, HelveticaNeue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-decoration: none;
+    border: 1px solid #00b8ff;
+    background-color: #00b8ff;
+    color: #fff
+}
+
+.logged-out-header .signupbtntwo::-moz-focus-inner {
+    border: 0;
+    padding: 0
+}
+
+.logged-out-header .signupbtntwo:focus {
+    border-color: #00b1f5;
+    background-color: #00b1f5;
+    color: hsla(0, 0%, 100%, .9)
+}
+
+.logged-out-header .signupbtntwo:active {
+    border-color: #00a9eb;
+    background-color: #00a9eb;
+    color: hsla(0, 0%, 100%, .8)
+}
+
+.logged-out-header .disabled.active.signupbtntwo,
+.logged-out-header .disabled.signupbtntwo,
+.logged-out-header [disabled].signupbtntwo,
+.logged-out-header [disabled].signupbtntwo:active {
+    border-color: #00b8ff;
+    background-color: #00b8ff;
+    color: hsla(0, 0%, 100%, .5);
+    cursor: default
+}
+
+.flag--is-dev .logged-out-header .signupbtntwo:not([role=button]):not(button),
+.logged-out-header .flag--is-dev .signupbtntwo:not([role=button]):not(button) {
+    padding: 50px 70px!important;
+    border: 10px dotted!important;
+    background-color: #d95e40!important;
+    font-size: 40px!important
+}
+
 .compose-button {
     position: relative;
     cursor: pointer;
@@ -15030,9 +15086,9 @@ html.dialog_lock {
 .logged-out-header.monochrome .login-button,
 .logged-out-header.monochrome .login-button:active,
 .logged-out-header.monochrome .login-button:focus,
-.logged-out-header.monochrome .signup-button,
-.logged-out-header.monochrome .signup-button:active,
-.logged-out-header.monochrome .signup-button:focus {
+.logged-out-header.monochrome .signupbtntwo,
+.logged-out-header.monochrome .signupbtntwo:active,
+.logged-out-header.monochrome .signupbtntwo:focus {
     background-color: #fff;
     color: #444
 }
@@ -15042,8 +15098,8 @@ html.dialog_lock {
     height: 32px;
     line-height: 22px;
     margin-right: 10px;
-    padding-left: 13px;
-    padding-right: 13px;
+    padding-left: 18px;
+    padding-right: 18px; 
     text-align: center;
     vertical-align: top
 }
@@ -15051,6 +15107,23 @@ html.dialog_lock {
 .logged-out-header .signup_link:active {
     opacity: .7
 }
+
+
+.logged-out-header .signupbtn {
+    border: 0;
+    height: 32px;
+    line-height: 22px;
+    margin-right: 10px;
+    padding-left: 18px;
+    padding-right: 18px; 
+    text-align: center;
+    vertical-align: top
+}
+
+.logged-out-header .signupbtn:active {
+    opacity: .7
+}
+
 
 .logo {
     float: left;
@@ -15427,7 +15500,8 @@ only screen and (min-resolution:125dpi) {
 
 .l-header-container--refresh.l-header-container--transparent .login-button {
     background-color: rgba(0, 0, 0, .0941176);
-    color: #fff
+    color: #fff;
+	visibility: hidden;
 }
 
 .l-header-container--refresh.l-header-container--transparent .tab_notice {

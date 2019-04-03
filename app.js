@@ -5,7 +5,7 @@ const path = require('path'),
 const mongoose = require('mongoose');
 
 
-const routesCt = require('./routes/ct.route'); // Imports routes for the products
+const routesCt = require('./backend/routes/ct.route'); // Imports routes for the products
 const app = express();
 
 // Set up mongoose connection
@@ -28,6 +28,7 @@ app.use(bodyParser.json());
 app.use('/register', routesCt);
 
 app.use('/', express.static(path.join(__dirname, 'uifolder')));
+
 //INSERT CODE IN STEP 3
 
 const iPort = appEnv.isLocal ? 3000: appEnv.port;
