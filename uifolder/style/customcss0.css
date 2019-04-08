@@ -1,7 +1,5 @@
 .inputbox{
-	    margin: 1rem;
-		margin-bottom:0.5rem;
-    width: 18rem;
+	    
     font-size: medium;
     font-family: sans-serif;
     padding: 0.2rem;
@@ -13,6 +11,7 @@
     background: #a0c9c1;
     font-family: sans-serif;
 	    width: 6rem;
+		margin:0.5rem;
 }
 .registerbtn{
 	    border: 1px solid;
@@ -21,4 +20,5 @@
     background: #eec1a0;
     font-family: sans-serif;
 	    width: 6rem;
+		margin:0.5rem;
 }

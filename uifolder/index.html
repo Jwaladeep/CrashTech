@@ -35,19 +35,18 @@
         }
     </style>
     <style>
-
         button#registerbtn:enabled{
             cursor:pointer;
             background: #a0c9c1;
         }
-        button#registerbtn{
+        /*button#registerbtn{
             position: relative;
             left: 50%;
-        }
-        button#resetbtn{
+        }*/
+       /* button#resetbtn{
             left:32%;
             position: relative;
-        }
+        }*/
         .labelPos{
         left: 1%;
         position: absolute;
@@ -56,6 +55,43 @@
         .inputPos{
             position:relative;
             left:41%;
+        }
+
+        form.regisformPos{
+            margin-top:13%;
+            margin-left:18%;
+            width:64%;
+            position: absolute;
+            top:inherit;
+            background: rgba(256,256,256,0.1);
+            padding: 2rem;
+        }
+
+        div.personalPos{
+            width:50%;
+            float:left;
+            display: grid;
+            justify-content: space-around;
+        }
+
+        div.appPos{
+            float: left;
+            width: 50%;
+            display: grid;
+            justify-content: space-around;
+        }
+        div.resBtnPos{
+           width: 100%;
+           display: flex;
+           justify-content: center;
+        }
+
+        select:invalid {
+            color: gray;
+        }
+        option[value=""][disabled] {
+            display: none;
+            color:gray;
         }
     </style>
     <title> CrashTech</title>
@@ -1790,7 +1826,7 @@
     <iframe width="0" height="0" name="__cmpLocator" style="display: none;"></iframe>
     <iframe height="1" width="1" frameborder="0" style="position:absolute;top:0;left:0;visibility:hidden;pointer-events:none;" tabindex="-1" allowtransparency="true" src="https://cookiex.ngd.yahoo.com/v2/cexposer/SIG=11lum9jej/*https%3A//www.tumblr.com/yahoo_cookie_receiver.html"></iframe>
     <div class="about-tumblr-showcase ready show-create">
-       <!--  <div class="dash_b_form_container with_bg has_subheading">
+        <!--  <div class="dash_b_form_container with_bg has_subheading">
             <div class="mobile-apps">
                 <ul class="apps">
                     <li class="app-item">
@@ -1928,52 +1964,60 @@
             </div>
             <div class="section welcome-section" data-section="welcome" data-section-title="Okay, it’s not actually hard to explain." style="z-index: 1;">
                 <div class="section-wrapper">
-                    <div class="fullscreen_post_bg" style="background-image:url(https://66.media.tumblr.com/a367c2f8a89ef5073a38d009f86d8785/tumblr_po214mkFVa1tv1x8do1_1280.jpg)">
-                        <form id="registrationform" style="position: absolute;top: 18%;left: 36%;margin: 1rem;width: fit-content;font-family: cursive;font-size: medium;">
-                            <label for="name" class="labelPos">Name*</label>
-                            <input class="inputbox inputPos" type="text" name="name" id="name" placeholder="Enter your name here.." required>
-                            <br>
-                            <label for="orgname" class="labelPos">Institution Name*</label>
-                            <input class="inputbox inputPos" type="text" name="orgname" id="orgname" placeholder="Enter Organisation's name here.. " required>
-                            <br>
-                            <label for="email" class="labelPos">EmailID*</label>
-                            <input class="inputbox inputPos" type="email" name="email" id="email" placeholder="Eg: jwalagarwal79@gmail.com" required>
-                            <br>
-                            <label for="phone" class="labelPos">Phone*</label>
-                            <input class="inputbox inputPos" type="tel" name="phone" id="phone" pattern="[0-9]{10}" placeholder="Eg: 8292613514" required>
-                            <br>
-                            <label for="city" class="labelPos">City*</label>
-                            <select class="inputbox inputPos" name="city" id="city" required>
-                                <option >Select Your City</option>
-                                <optgroup label="Jharkhand">
-                                    <option value="Hazaribagh">Hazaribagh</option>
-                                    <option value="Jamshedpur">Jamshedpur</option>
-                                    <option value="Ramgarh">Ramgarh</option>
-                                    <option value="Ranchi">Ranchi</option>
-                                </optgroup>
-                                <optgroup label="Karnataka">
-                                    <option value="Bangalore">Bangalore</option>
-                                    <option value="Mangalore">Mangalore</option>
-                                    <option value="Mysore">Mysore</option>
-                                </optgroup>
-                                <optgroup label="Maharastra">
-                                    <option value="Mumbai">Mumbai</option>
-                                    <option value="Pune">Pune</option>
-                                </optgroup>
-                                <optgroup label="Telangana">
-                                    <option value="Hyderabad">Hyderabad</option>
-                                </optgroup>
-                                <optgroup label="West Bengal">
-                                    <option value="Kolkata">Kolkata</option>
-                                </optgroup>
-                            </select><br>
-                            <label for="registerfor" class="labelPos">Register For*</label>
-                            <input class="inputbox inputPos" type="text" name="registerfor" placeholder="Select a category from Tiles above.." id="registerfor" required><br>
-                            <label for="appdate" class="labelPos">Appointment Date*</label>
-                            <input class="inputbox inputPos" type="date" name="appdate" id="appdate"><br>
-                            <label for="comment" class="labelPos">Comment</label><textarea name="comment" class="inputPos inputbox" id="comment" placeholder="Have some query? Write to us!!"></textarea><br>
-                            <button class="resetbtn" id="resetbtn">Reset</button>
-                            <button class="registerbtn" onclick="onClickRegister()" id="registerbtn" disabled="disabled">Register</button>
+                    <div class="fullscreen_post_bg">
+                        <video autoplay muted loop style="width:'fit-content'; z-index: -1;">
+                            <source src="crashtechFinalBg.mp4" type="video/mp4"></video>
+                        <form id="registrationform" class="regisformPos" style="font-family: cursive;font-size: medium;">
+                            <div class="personalPos">
+                                <label for="name" class="">Name*</label>
+                                <input class="inputbox " type="text" name="name" id="name" placeholder="Enter your name here.." required>
+                                <br>
+                                <label for="orgname" class="">Institution Name*</label>
+                                <input class="inputbox " type="text" name="orgname" id="orgname" placeholder="Enter Organisation's name here.. " required>
+                                <br>
+                                <label for="email" class="">EmailID*</label>
+                                <input class="inputbox " type="email" name="email" id="email" placeholder="Eg: jwalagarwal79@gmail.com" required>
+                                <br>
+                                <label for="phone" class="">Phone*</label>
+                                <input class="inputbox " type="tel" name="phone" id="phone" pattern="[0-9]{10}" placeholder="Eg: 8292613514" required>
+                                <br>
+                            </div>
+                            <div class="appPos">
+                                <label for="city" class="">City*</label>
+                                <select class="inputbox " name="city" id="city" required>
+                                    <option disabled selected hidden>Select Your City</option>
+                                    <optgroup label="Jharkhand">
+                                        <option value="Hazaribagh">Hazaribagh</option>
+                                        <option value="Jamshedpur">Jamshedpur</option>
+                                        <option value="Ramgarh">Ramgarh</option>
+                                        <option value="Ranchi">Ranchi</option>
+                                    </optgroup>
+                                    <optgroup label="Karnataka">
+                                        <option value="Bangalore">Bangalore</option>
+                                        <option value="Mangalore">Mangalore</option>
+                                        <option value="Mysore">Mysore</option>
+                                    </optgroup>
+                                    <optgroup label="Maharastra">
+                                        <option value="Mumbai">Mumbai</option>
+                                        <option value="Pune">Pune</option>
+                                    </optgroup>
+                                    <optgroup label="Telangana">
+                                        <option value="Hyderabad">Hyderabad</option>
+                                    </optgroup>
+                                    <optgroup label="West Bengal">
+                                        <option value="Kolkata">Kolkata</option>
+                                    </optgroup>
+                                </select><br>
+                                <label for="registerfor" class="">Register For*</label>
+                                <input class="inputbox" type="text" name="registerfor" placeholder="Select a category from Tiles above.." id="registerfor" required><br>
+                                <label for="appdate" class="">Appointment Date*</label>
+                                <input class="inputbox" type="date" name="appdate" id="appdate"><br>
+                                <label for="comment">Comment</label><textarea name="comment" class="inputbox" id="comment" placeholder="Have some query? Write to us!!"></textarea><br>
+                            </div>
+                            <div class="resBtnPos">
+                                <button class="resetbtn" id="resetbtn">Reset</button>
+                                <button class="registerbtn" onclick="onClickRegister()" id="registerbtn" disabled="disabled">Register</button>
+                            </div>
                         </form>
                     </div>
                     <div class="fullscreen_post_footer">

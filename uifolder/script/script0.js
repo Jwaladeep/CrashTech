@@ -95,14 +95,17 @@ function onClickRegister(oEvent){
   "headers": {
     "content-type": "application/x-www-form-urlencoded",
     "cache-control": "no-cache",
+    "cache":false,
   },
   "data": toSend
 }
 
 $.ajax(settings).done(function (response) {
   console.log(response);
+  alert('Registration confirmed!! Our team will reach back to you soon. ');
+  
 });
-	alert('Registration confirmed!! Our team will reach back to you soon. ');
+	
 }
 
 function moveToFourthPage(oEvent){
