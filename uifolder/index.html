@@ -93,6 +93,15 @@
             display: none;
             color:gray;
         }
+select:required:invalid {
+  color: gray;
+}
+option[value=""][disabled] {
+  display: none;
+}
+option {
+  color: black;
+}}
     </style>
     <title> CrashTech</title>
     <link rel="manifest" href="/manifest.json">
@@ -1976,16 +1985,16 @@
                                 <input class="inputbox " type="text" name="orgname" id="orgname" placeholder="Enter Organisation's name here.. " required>
                                 <br>
                                 <label for="email" class="">EmailID*</label>
-                                <input class="inputbox " type="email" name="email" id="email" placeholder="Eg: jwalagarwal79@gmail.com" required>
+                                <input class="inputbox " type="email" name="email" title="Enter valid email id" id="email" placeholder="Eg: jwalagarwal79@gmail.com" required>
                                 <br>
                                 <label for="phone" class="">Phone*</label>
-                                <input class="inputbox " type="tel" name="phone" id="phone" pattern="[0-9]{10}" placeholder="Eg: 8292613514" required>
+                                <input class="inputbox " type="tel" name="phone" id="phone" pattern="[1-9]{1}[0-9]{9}" title="Enter 10 digit mobile number" placeholder="Eg: 8292613514" required>
                                 <br>
                             </div>
                             <div class="appPos">
                                 <label for="city" class="">City*</label>
                                 <select class="inputbox " name="city" id="city" required>
-                                    <option disabled selected hidden>Select Your City</option>
+                                    <option value="" disabled selected>Select Your City</option>
                                     <optgroup label="Jharkhand">
                                         <option value="Hazaribagh">Hazaribagh</option>
                                         <option value="Jamshedpur">Jamshedpur</option>
@@ -2009,7 +2018,16 @@
                                     </optgroup>
                                 </select><br>
                                 <label for="registerfor" class="">Register For*</label>
-                                <input class="inputbox" type="text" name="registerfor" placeholder="Select a category from Tiles above.." id="registerfor" required><br>
+                                <select class="inputbox " name="registerfor" id="registerfor" required>
+                                    <option value="" disabled selected>Select from Options below or Tiles above</option>
+                                    <option value="4-Day CrashTech">4-Day CrashTech</option>
+                                    <option value="Frontend Development">Frontend Development</option>
+                                    <option value="Middleware Services">Middleware Services</option>
+                                    <option value="MEAN Stack Development">MEAN Stack Development</option>
+                                    <option value="Backend Development">Backend Development</option>
+                                    <option value="Technical Interview Workshop">Technical Interview Workshop</option>
+                                    <option value="Data Structure & Algorithms">Data Structure & Algorithms</option>
+                                </select><br>
                                 <label for="appdate" class="">Appointment Date*</label>
                                 <input class="inputbox" type="date" name="appdate" id="appdate"><br>
                                 <label for="comment">Comment</label><textarea name="comment" class="inputbox" id="comment" placeholder="Have some query? Write to us!!"></textarea><br>

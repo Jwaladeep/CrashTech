@@ -22,3 +22,6 @@
 	    width: 6rem;
 		margin:0.5rem;
 }
+.redBorder{
+	    border: 2px solid red;
+}
