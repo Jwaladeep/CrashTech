@@ -1,7 +1,7 @@
 ---
 applications:
 - name: crashTech
-  random-route: true
+  random-route: false
   memory: 128MB
   disk_quota: 128MB
   instances: 1
